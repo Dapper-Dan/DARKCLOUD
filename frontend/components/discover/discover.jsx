@@ -175,7 +175,7 @@ export default class Discover extends React.Component {
                                     <SongPartContainer song={song} />
                                 ))}
                             </Carousel.Item>
-                            {trendingSongs.length > 8 &&
+                            {trendingHipHop.length > 4 &&
                                 <Carousel.Item>
                                     {trendingHipHop.slice(4, 9).map((song) => ( 
                                         <SongPartContainer song={song} />
