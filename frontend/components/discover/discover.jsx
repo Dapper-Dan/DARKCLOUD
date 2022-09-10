@@ -96,11 +96,13 @@ export default class Discover extends React.Component {
                                     <SongPartContainer song={song} />
                                 ))}
                             </Carousel.Item>
-                            <Carousel.Item>
-                                {trendingSongs.slice(8, 12).map((song) => ( 
-                                    <SongPartContainer song={song} />
-                                ))}
-                            </Carousel.Item>
+                            {trendingSongs.length > 9 &&
+                                <Carousel.Item>
+                                    {trendingSongs.slice(8, 12).map((song) => ( 
+                                        <SongPartContainer song={song} />
+                                    ))}
+                                </Carousel.Item>
+                            }
                         </Carousel>
                         <h3>Electric Dreams</h3>
                         <p>The latest and hottest EDM</p>
