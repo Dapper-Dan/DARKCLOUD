@@ -96,7 +96,7 @@ export default class Discover extends React.Component {
                                     <SongPartContainer song={song} />
                                 ))}
                             </Carousel.Item>
-                            {trendingSongs.length > 9 &&
+                            {trendingSongs.length > 8 &&
                                 <Carousel.Item>
                                     {trendingSongs.slice(8, 12).map((song) => ( 
                                         <SongPartContainer song={song} />
@@ -112,12 +112,14 @@ export default class Discover extends React.Component {
                                     <SongPartContainer song={song} />
                                 ))}
                             </Carousel.Item>
-                            <Carousel.Item>
-                                {trendingEDM.slice(4, 9).map((song) => ( 
-                                    <SongPartContainer song={song} />
-         
-                                ))}
-                            </Carousel.Item>
+                            {trendingEDM.length > 4 &&
+                                <Carousel.Item>
+                                    {trendingEDM.slice(4, 9).map((song) => ( 
+                                        <SongPartContainer song={song} />
+            
+                                    ))}
+                                </Carousel.Item>
+                            }
                         </Carousel>
                         <h3>Next Set</h3>
                         <p>New talented artists to follow</p>
@@ -134,18 +136,20 @@ export default class Discover extends React.Component {
                                     </>
                                 ))}
                             </Carousel.Item>
-                            <Carousel.Item>
-                                {recentUsers.slice(4, 9).map((user, i) => ( 
-                                     <>
-                                     <div className="discoverNewUsersBox">
-                                         <img id="profilePic"  src={user.profilePicUrl} /> 
-                                         <Link to={`/${user.display_name}`}>
-                                             <h1 className="discoverUserPart">{user.display_name}</h1>
-                                         </Link>
-                                     </div>
-                                     </>
-                                ))}
-                            </Carousel.Item>
+                            {recentUsers.length > 4 &&
+                                <Carousel.Item>
+                                    {recentUsers.slice(4, 9).map((user, i) => ( 
+                                        <>
+                                        <div className="discoverNewUsersBox">
+                                            <img id="profilePic"  src={user.profilePicUrl} /> 
+                                            <Link to={`/${user.display_name}`}>
+                                                <h1 className="discoverUserPart">{user.display_name}</h1>
+                                            </Link>
+                                        </div>
+                                        </>
+                                    ))}
+                                </Carousel.Item>
+                            }
                         </Carousel>
                         <h3>Scooby Dooby Doo Bop</h3>
                         <p>Fresh smooth jazz</p>
@@ -155,11 +159,13 @@ export default class Discover extends React.Component {
                                     <SongPartContainer song={song} />
                                 ))}
                             </Carousel.Item>
-                            <Carousel.Item>
-                                {trendingJazz.slice(4, 9).map((song) => ( 
-                                    <SongPartContainer song={song} />
-                                ))}
-                            </Carousel.Item>
+                            {trendingJazz.length > 8 &&
+                                <Carousel.Item>
+                                    {trendingJazz.slice(4, 9).map((song) => ( 
+                                        <SongPartContainer song={song} />
+                                    ))}
+                                </Carousel.Item>
+                            }
                         </Carousel>
                         <h3>Hip Hoppotamus</h3>
                         <p>The hottest and hippest hip-hop</p>
@@ -169,11 +175,13 @@ export default class Discover extends React.Component {
                                     <SongPartContainer song={song} />
                                 ))}
                             </Carousel.Item>
-                            <Carousel.Item>
-                                {trendingHipHop.slice(4, 9).map((song) => ( 
-                                    <SongPartContainer song={song} />
-                                ))}
-                            </Carousel.Item>
+                            {trendingSongs.length > 8 &&
+                                <Carousel.Item>
+                                    {trendingHipHop.slice(4, 9).map((song) => ( 
+                                        <SongPartContainer song={song} />
+                                    ))}
+                                </Carousel.Item>
+                            }
                         </Carousel>
                     </div>
                     <div className="sideBar" >
