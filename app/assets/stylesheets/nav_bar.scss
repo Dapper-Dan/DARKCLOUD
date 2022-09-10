@@ -308,9 +308,11 @@
 
 .songFormBackGround {
     background-color: blue;
-    min-height: inherit;
+    min-height: 100vh;
     display: flex;
-    background-image: url('uploadForm.jpg');   
+    background-image: url('uploadForm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .songUpload-form {
