@@ -158,7 +158,7 @@ class SongPart extends React.Component {
       let progressWaveForm
       if (this.props.state.session.currentSong && this.props.song.songUrl === this.props.state.session.currentSong.songUrl) {
         progressWaveForm = (
-        <div className="progressWaveFormContainer" style={{width:`${this.state.currentTime}`}}>
+        <div className="progressWaveFormContainer" style={{width:`${this.state.currentTime}%`}}>
           <img className="progressWaveFormImg" src={song.waveForm} />
         </div>
         )

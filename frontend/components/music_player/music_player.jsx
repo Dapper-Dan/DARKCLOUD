@@ -276,7 +276,7 @@ class MusicPlayer extends React.Component {
                             {this.state.songTime}
                         </div>
                         <div className="song-bar" >
-                            <div className="song-progress-bar" style={{width:`${this.state.currentTime}`}}>
+                            <div className="song-progress-bar" style={{width:`${this.state.currentTime}%`}}>
                             </div>
                             <div className="bar-dot" onMouseDown={this.handleMouseDown}>
                             </div>
